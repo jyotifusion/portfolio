@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skills - Deepak Kumar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00e6e6;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .skill-title {
+      background-color: rgba(0, 255, 255, 0.1);
+      padding: 12px;
+      margin-bottom: 10px;
+      border-left: 5px solid #00cccc;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .skill-title:hover {
+      background-color: rgba(0, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
+
+    .skill-details {
+      display: none;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-left: 3px solid #66ffcc;
+      border-radius: 6px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #66ffcc;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛠 My Skills</h1>
+
+    <div class="skill-title" onclick="toggleDetails(this)">Programming Languages</div>
+    <div class="skill-details">
+      <ul>
+        <li>Python</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="skill-title" onclick="toggleDetails(this)">Machine Learning</div>
+    <div class="skill-details">
+      <ul>
+        <li>Regression, Classification, Clustering</li>
+        <li>Neural Networks (ANN, LSTM)</li>
+        <li>Scikit-Learn, TensorFlow</li>
+      </ul>
+    </div>
+
+    <div class="skill-title" onclick="toggleDetails(this)">Data Analysis & Visualization</div>
+    <div class="skill-details">
+      <ul>
+        <li>Pandas, NumPy, Matplotlib, Seaborn</li>
+        <li>MS Excel (Intermediate)</li>
+      </ul>
+    </div>
+
+    <div class="skill-title" onclick="toggleDetails(this)">Tools</div>
+    <div class="skill-details">
+      <ul>
+        <li>Jupyter Notebook</li>
+        <li>Power BI</li>
+        <li>Google Colab</li>
+      </ul>
+    </div>
+
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    function toggleDetails(title) {
+      const details = title.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
